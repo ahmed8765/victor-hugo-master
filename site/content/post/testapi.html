@@ -28,8 +28,7 @@ const user = netlifyIdentity.currentUser();
 // netlifyIdentity.on('init', user => console.log('init', user));
 
 netlifyIdentity.on('login', user => $("#p_count").text(user));
-    
-    $("#p_count").text(count);
+   
   </script>
 </body>
 </html>
