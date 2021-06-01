@@ -18,7 +18,7 @@
     Simple button that will open the modal.
   -->
   <div data-netlify-identity-button>Login with Netlify Identity</div>
-
+  <span id='p_count'></span>
   <script>
 
 // Get the current user:
@@ -27,9 +27,9 @@ const user = netlifyIdentity.currentUser();
 // Bind to events
 // netlifyIdentity.on('init', user => console.log('init', user));
 
-netlifyIdentity.on('login', user => abc);
-    console.log('login', abc.id)
+netlifyIdentity.on('login', user => $("#p_count").text(user));
     
+    $("#p_count").text(count);
   </script>
 </body>
 </html>
