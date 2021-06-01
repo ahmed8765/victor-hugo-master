@@ -32,6 +32,17 @@ console.log("session storage");
 for (i = 0; i < sessionStorage.length; i++) {
     console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
 }
+    
+    
+    
+    
+    netlifyIdentity.open();
+ 
+// Get the current user:
+const user = netlifyIdentity.currentUser();
+ 
+// Bind to events
+netlifyIdentity.on('init', user => console.log('init', user));
 
 
   </script>
