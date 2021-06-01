@@ -42,9 +42,10 @@ for (i = 0; i < sessionStorage.length; i++) {
 const user = netlifyIdentity.currentUser();
  
 // Bind to events
-netlifyIdentity.on('init', user => console.log('init', user));
+// netlifyIdentity.on('init', user => console.log('init', user));
 
-
+netlifyIdentity.on('login', user => console.log('login', user));
+    
   </script>
 </body>
 </html>
